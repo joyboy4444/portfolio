@@ -1,30 +1,11 @@
 "use client";
-import React, { useState } from 'react'
+import React from 'react'
 import GithubIcon from "../../../public/images/github-icon.svg"
 import IGIcon from "../../../public/images/icons8-instagram.svg"
 import Link from 'next/link'
 import Image from 'next/image'
 
 const EmailSection = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
-    
-    // การแจ้งใน console แทนการเรียก API
-    console.log("Data to be sent:", data);
-    
-    // จำลองการตอบกลับของระบบ
-    setEmailSubmitted(true);
-    setTimeout(() => setEmailSubmitted(false), 3000);  // รีเซ็ตสถานะหลังจาก 3 วินาที
-  };
-
   return (
     <section id="contact" className='grid md:grid-cols-2 mt-12 md:my-12 py-24 gap-4 relative'>
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 left-4 transform -translate-x-1/2 -translate-1/2"></div>
@@ -43,7 +24,7 @@ const EmailSection = () => {
         </div>
       </div>
       <div>
-        <form className='flex flex-col' onSubmit={handleSubmit}>
+        <form className='flex flex-col'>
           <div className='mb-6'>
             <label className='text-white block mb-2 text-sm font-medium' htmlFor='email'>
               Email
@@ -93,11 +74,6 @@ const EmailSection = () => {
               text-white font-medium py-2.5 px-5 rounded-lg w-full'>
             ส่งข้อความ
           </button>
-          {emailSubmitted && (
-            <p className='text-green-500 text-sm mt-2'>
-              ส่งข้อความสำเร็จ
-            </p>
-          )}
         </form>
       </div>
     </section>
