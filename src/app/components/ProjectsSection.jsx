@@ -60,38 +60,7 @@ const ProjectsData = [
     tag: ["ทั้งหมด", "การแข่ง"],
     preview:"/blog",
   },
-  {
-    id:8,
-    title: "KU openhouse com-sci",
-    description: "กดเพื่ออ่านเพิ่มเติม",
-    image: "/images/ku.png",
-    tag: ["ทั้งหมด", "กิจกรรม"],
-    preview:"#projects",
-  },
-  {
-    id:9,
-    title: "OTC:AI",
-    description: "กดเพื่ออ่านเพิ่มเติม",
-    image: "/images/OTC_AI.jpg",
-    tag: ["ทั้งหมด", "กิจกรรม"],
-    preview:"#projects",
-  },
-  {
-    id:10,
-    title: "KMITL Open House 2024",
-    description: "กดเพื่ออ่านเพิ่มเติม",
-    image: "/images/image.png",
-    tag: ["ทั้งหมด", "กิจกรรม"],
-    preview:"#projects",
-  },
-  {
-    id:11,
-    title: "SCHOOL OF EMGINEERING KMTIL",
-    description: "กดเพื่ออ่านเพิ่มเติม",
-    image: "/images/image_2.png",
-    tag: ["ทั้งหมด", "กิจกรรม"],
-    preview:"#projects",
-  },
+
 ]
 
 const ProjectsSection = () => {
@@ -121,9 +90,6 @@ const ProjectsSection = () => {
         <ProjectTag onClick={handleTagChange}  
         name='การแข่ง' 
         isSelected={tag === "การแข่ง"}/>
-        <ProjectTag onClick={handleTagChange}  
-        name='กิจกรรม' 
-        isSelected={tag === "กิจกรรม"}/>
       </div>
       <div className='grid  lg:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12'>
         {filteredProjects.map((project) => (

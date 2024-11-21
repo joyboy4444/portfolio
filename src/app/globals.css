@@ -5,14 +5,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: linear-gradient(to bottom, #000000, #0b001b); /* ไล่เฉดสีดำไปสีม่วงเข้ม */
   --foreground: #060020;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000;
-    --foreground: #060020;
+    --background: linear-gradient(to bottom, #000000, #0b001b); /* ไล่เฉดสีดำไปสีม่วงเข้มในโหมดมืด */
+    --foreground: #ffffff; /* เปลี่ยนสีข้อความให้มองเห็นได้ชัดเจนในพื้นหลังสีเข้ม */
   }
 }
 
@@ -21,6 +21,7 @@ body {
   background: var(--background);
   font-family: "Noto Sans Thai", sans-serif;
 }
+
 
 @layer utilities {
   .text-balance {
