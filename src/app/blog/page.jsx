@@ -12,7 +12,7 @@ const Blog = () => {
     </Link>
   <div className="p-6 mt-8 mx-auto w-full max-w-2xl lg:max-w-5xl md:max-w-3xl"> {/* ใช้ mx-auto และ w-full หรือ w-3/4 เพื่อกำหนดความกว้าง */}
     
-    <h1 className="text-6xl font-bold text-purple-500 text-center">การแข่งขัน</h1>
+    <h1 className="text-5xl font-bold text-purple-500 text-center sm:text-6xl">การแข่งขัน</h1>
     <hr className='border-2 border-purple-100 mt-4'/>
     <h2 className="text-4xl font-bold text-white text-center mt-10"> NSC (Smart Farm AI)</h2>
 
